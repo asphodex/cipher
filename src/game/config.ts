@@ -5,9 +5,10 @@ export function createGame(parent: string): Phaser.Game {
   const config: Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
     parent,
-    width: 960,
-    height: 640,
-    backgroundColor: '#0f172a',
+    // Вертикальный «лист бумаги»: удобно и на телефоне, и на мониторе.
+    width: 720,
+    height: 1060,
+    backgroundColor: '#3b3128',
     scene: [GameScene],
     scale: {
       mode: Phaser.Scale.FIT,
